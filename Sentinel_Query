@@ -1,0 +1,6 @@
+Failed_RDP_With_Geo_CL
+| extend RawData = tostring(RawData)
+| parse RawData with * "latitude:" latitude ",longitude:" longitude ",destinationhost:" destinationhost ",username:" username ",sourcehost:" sourcehost ",state:" state ", country:" country ",label:" label ",timestamp:" timestamp
+| summarize event_count=count() by sourcehost, latitude, longitude, label, destinationhost, country
+| where destinationhost != "samplehost"
+| where sourcehost != ""
