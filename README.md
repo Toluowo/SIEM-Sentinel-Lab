@@ -1,12 +1,14 @@
-<h1>Failed RDP attempts to Honeypot Geolocation information</h1>
+<h1>Failed RDP attempts to Honeypot with Geolocation information</h1>
 
 <h2>Description</h2>
 This lab is focused on capturing and showing the analysis of brute force attempts made to a honeypot.
-The PowerShell script in this repository is responsible for outputting Windows event log information and additionally fetches the geographic information of the attackers through a third-party API.
-
-The implementation of the honeypot used a Windows 10 Pro host. Failed login attempts from RDP connections captured in the Windows event viewer were fed to the third-party API tool to get more detailed information from the IP of the attacker using the PowerShell script that served as the log exporter found in this repo.
-
-The geolocation information generated from the API tool was used to plot a map in Azure Sentinel and screenshots can be seen below.
+The PowerShell script in this repository is responsible for outputting Windows event log information and additionally fetching the attackers' geographic information through a third-party API in this repository.
+<br><br>
+Detailed steps taken can also be found in this repository.
+<br><br>
+The honeypot's implementation used a Windows 10 Pro host hosted on Microsoft Azure. Failed login attempts from RDP connections captured in the Windows event viewer were fed to the third-party API tool to get more detailed information from the attacker's IP using the PowerShell script that served as the log exporter found in this repository.
+<br><br>
+The geolocation information generated from the API tool was then used to plot a map in Azure Sentinel; screenshots can be seen below.
 
 
 <h2>Live attacks from Lithuania as can be seen on the Powershell script</h2>
